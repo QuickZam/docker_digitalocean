@@ -18,10 +18,7 @@ services:
     depends_on:
       - redis
       - flask_app
-    # volumes:
-    # - type: bind
-    #   source: $HOST/simple_worker
-    #   target: './simple_worker/audio_files' 
+
 
 
 
