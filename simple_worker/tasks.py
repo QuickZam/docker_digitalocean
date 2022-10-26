@@ -5,7 +5,6 @@ import os
 from io import BytesIO
 from celery import Celery
 import banana_dev as banana
-from pytube import YouTube, extract
 from celery.utils.log import get_task_logger
 
 logger = get_task_logger(__name__)
