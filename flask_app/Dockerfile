@@ -11,8 +11,7 @@ WORKDIR /flask_app
 ENV FLASK_ENV=development
 EXPOSE 5000
 # CMD flask run --host=0.0.0.0
-CMD gunicorn --workers $WORKERS \
- --threads $THREADS \
+CMD gunicorn --workers 2 \
  --bind 0.0.0.0:5000 \
  --log-level DEBUG \
  app:app
