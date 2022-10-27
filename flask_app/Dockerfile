@@ -14,6 +14,6 @@ ENV FLASK_ENV=development
 
 CMD gunicorn --workers $WORKERS \
  --threads $THREADS \
- --bind 0.0.0.0:$PORT_APP \
+ --bind 0.0.0.0:5000:80 \
  --log-level DEBUG \
  app:app
