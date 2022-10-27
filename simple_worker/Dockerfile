@@ -9,6 +9,6 @@ ADD . /simple_worker
 WORKDIR /simple_worker
 
 
-ENTRYPOINT celery -A tasks worker --loglevel=info
+# ENTRYPOINT celery -A tasks worker --loglevel=info
 #-Q celery_worker
-#ENTRYPOINT ['celery','-A','test_celery', 'worker', '--loglevel=info']
+ENTRYPOINT ['celery','-A','test_celery', 'worker', '--loglevel=info']
