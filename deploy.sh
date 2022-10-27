@@ -4,5 +4,5 @@ git pull
 
 
 
-docker-compose up --build 
+docker-compose up -d --build 
 echo "Finished Building the docker!"
