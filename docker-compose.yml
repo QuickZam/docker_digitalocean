@@ -19,10 +19,6 @@ services:
       - redis
       - flask_app
 
-
-
-
-
   redis:
     image: 'redis:4-alpine'
     ports:
