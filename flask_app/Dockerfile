@@ -9,10 +9,10 @@ ADD . /flask_app
 WORKDIR /flask_app
 
 ENV FLASK_ENV=development
-
-CMD flask run --host=0.0.0.0
-# CMD gunicorn --workers $WORKERS \
-#  --threads $THREADS \
-#  --bind 0.0.0.0:5000:80 \
-#  --log-level DEBUG \
-#  app:app
+EXPOSE 5000
+# CMD flask run --host=0.0.0.0
+CMD gunicorn --workers $WORKERS \
+ --threads $THREADS \
+ --bind 0.0.0.0:5000 \
+ --log-level DEBUG \
+ app:app
