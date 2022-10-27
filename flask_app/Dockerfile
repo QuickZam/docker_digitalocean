@@ -14,4 +14,4 @@ EXPOSE 5000
 CMD gunicorn --workers 2 \
  --bind 0.0.0.0:5000 \
  --log-level DEBUG \
- app:app
+ flask:app
