@@ -6,6 +6,10 @@ simple_app = Celery(
     'simple_worker', broker='redis://redis:6379/0', backend='redis://redis:6379/0')
 
 
+@app.route('/')
+def home(): 
+    return "Welcome Page"
+
 @app.route('/simple_start_task/<links>')
 def call_method(links):
     app.logger.info("Invoking Method ")
